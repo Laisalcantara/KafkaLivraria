@@ -1,5 +1,4 @@
-Variaveis
-:root {
+Variaveis:root {
     --cor1: #5e0b15;
     --cor2: #90323d;
     --cor3: #d9cab3;
@@ -21,20 +20,24 @@ Variaveis
     box-sizing: border-box;
 }
 
+/* Cor do body */
 body {
     background-color: var(--cor3);
 }
 
+/* Cor dos icons */
 a i {
     color: var(--cor5);
 }
 
+/* Desativando a estilização padrão do ul e pondo os objetos na mesma linha */
 .icons-circulo ul {
     list-style: none;
     display: inline-flex;
     justify-content: space-around;
 }
 
+/* Posição dos icons */
 .icons-circulo {
     position: absolute;
     top: 23%;
@@ -43,6 +46,7 @@ a i {
 
 }
 
+/* Configuração total dos icons */
 .icons-circulo a {
     display: inline-flex;
     text-decoration: none;
@@ -57,14 +61,17 @@ a i {
     font-size: 40px;
 }
 
+/* Mudando background com hover */
 .icons-circulo a:hover {
     background-color: var(--cor2);
 }
 
+/* Cronometrando a transição */
 .icons-circulo a i {
     transition: 0.4s all;
 }
 
+/* Rodando os icons */
 .icons-circulo a:hover>i {
     transform: rotate(360deg);
-} 
+}
