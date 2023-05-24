@@ -1,0 +1,70 @@
+Variaveis
+:root {
+    --cor1: #5e0b15;
+    --cor2: #90323d;
+    --cor3: #d9cab3;
+    --cor4: #bc8034;
+    --cor5: #000000;
+    --branco: #ffffff;
+}
+
+/* Importando fonte */
+@font-face {
+    font-family: disquete;
+    src: url(./fonte/FontsFree-Net-Disket-Mono-Regular.ttf);
+}
+
+/* Configuração geral da página */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor3);
+}
+
+a i {
+    color: var(--cor5);
+}
+
+.icons-circulo ul {
+    list-style: none;
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+.icons-circulo {
+    position: absolute;
+    top: 23%;
+    left: 40%;
+    transform: translate(-20%, -50%);
+
+}
+
+.icons-circulo a {
+    display: inline-flex;
+    text-decoration: none;
+    width: 70px;
+    height: 70px;
+    background-color: var(--cor4);
+    margin: 0 6px;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    font-size: 40px;
+}
+
+.icons-circulo a:hover {
+    background-color: var(--cor2);
+}
+
+.icons-circulo a i {
+    transition: 0.4s all;
+}
+
+.icons-circulo a:hover>i {
+    transform: rotate(360deg);
+} 
