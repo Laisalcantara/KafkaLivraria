@@ -55,7 +55,7 @@ a i {
     background-color: var(--cor4);
     margin: 0 6px;
     border-radius: 50px;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     transition: 0.4s;
     font-size: 40px;

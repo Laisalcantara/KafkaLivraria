@@ -118,15 +118,18 @@ header .search_box i {
     color: var(--branco);
     font-size: 20px;
     height: 100%;
+    left: 2px;
     padding: 5px;
     position: relative;
     cursor: pointer;
+    transition: all 0.4s;
     z-index: 1;
 }
 
 /* Hover da caixa de pesquisa */
 header .search_box i:hover {
-    background-color: var(--cor2);
+    background-color: var(--branco);
+    color: var(--cor1);
     border-radius: 50px;
 }
 
@@ -181,7 +184,7 @@ nav {
     display: none;
     left: 0;
     position: absolute;
-
+    z-index: 99;
 }
 
 /* Configurando o submenu para aparecer com o hover */
