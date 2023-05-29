@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+/* Variaveis */
+:root {
+    --cor1: #5e0b15;
+    --cor2: #90323d;
+    --cor3: #d9cab3;
+    --cor4: #bc8034;
+    --cor5: #000000;
+    --branco: #ffffff;
+}
+
+/* Importando fonte */
+@font-face {
+    font-family: disquete;
+    src: url(./fonte/FontsFree-Net-Disket-Mono-Regular.ttf);
+}
+
+body {
+    background-color: var(--cor3);
+}
+
+.area-card {
+    padding: 2rem 0;
+    padding: 2rem 0;
+    margin-left: 50px;
+}
+
+.area-card h1 {
+    font-family: disquete;
+    font-size: 35px;
+    color: var(--cor1);
+    margin-left: 40px;
+}
+
+.area-card h2 {
+    font-family: disquete;
+    color: var(--cor1);
+    font-weight: 300px;
+    font-size: 30px;
+    position: relative;
+    margin-bottom: 3rem;
+    margin-bottom: 10px;
+    margin-left: -50px;
+    text-align: center;
+}
+
+.area-card h2::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 2px;
+    background-color: var(--cor1);
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.area-card  h3 {
+    color: var(--cor1);
+    font-family: disquete;
+}
+
+.valor h3 {
+    color: var(--cor1);
+    font-family: disquete;
+    margin-bottom: 10px;
+}
+
+.slider {
+    display: flex;
+}
+
+.slider .card {
+    background-color: var(--branco);
+    border-radius: 5px;
+    margin: 10px;
+    margin-right: 22px;
+    padding: 30px;
+    box-shadow: 0px 4px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px -5px rgba(0, 0, 0, 0.75);
+    width: 300px;
+   left: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider .card .imagem {
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.slider .card .fav {
+    background-image: url(/site/html/img/ebook/heart-regular-24.png);
+    height: 30px;
+    width: 30px;
+    background-size: 30px;
+    display: flex;
+    place-self: flex-end;
+    transition: 0.3 all ease;
+    cursor: pointer;
+}
+
+.slider .card .fav:hover {
+    background-image: url(/site/html/img/ebook/heart-solid-24.png);
+}
+
+.estrelas i {
+    color: #bc8034;
+    margin-top: 15px;
+}
+
+.card .sinopse {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    width: 280px;
+    height: 280px;
+}
+
+.card .autor {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--cor2);
+    margin: 3px;
+}
+
+.card button {
+    width: 100px;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+    font-family: disquete;
+    color: var(--branco);
+    text-align: center;
+    background-color: var(--cor1);
+}
+
+.card button:hover {
+    background-color: var(--cor2);
+    font-family: disquete;
+    font-size: 15px;
+    font-weight: 550;
+    color: var(--branco);
+    border-radius: 40px;
+}

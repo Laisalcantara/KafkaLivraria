@@ -1,4 +1,7 @@
-Variaveis:root {
+@charset "utf-8";
+
+/* Variaveis */
+:root {
     --cor1: #5e0b15;
     --cor2: #90323d;
     --cor3: #d9cab3;
@@ -13,153 +16,296 @@ Variaveis:root {
     src: url(./fonte/FontsFree-Net-Disket-Mono-Regular.ttf);
 }
 
-/* Definindo fonte do h1,h2 */
-h1,
-h2 {
-    font-family: disquete;
+.area-livro {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Definindo fonte do p */
+.area-livro input {
+    display: none;
+    position: absolute;
+}
+
+.livro {
+    width: 350px;
+    height: 500px;
+    position: relative;
+    transition-duration: 1s;
+    perspective: 1500;
+}
+
+.capa {
+    background-image: url(/site/html/img/home/mais-vendidos.png);
+    width: 340px;
+    width: 490px;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 0 5px rgb(41, 41, 41);
+    transition: transform 1s;
+
+}
+
+.tampa-capa {
+    background-color: var(--cor1);
+}
+
+/* Centralizando, estabelezendo tamanho e dando sombra ao livro e as capas. */
+.capa,
+.tampa-capa {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 0 5px rgb(41, 41, 41);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center left;
+}
+
+.tampa-capa {
+    width: 350px;
+    height: 500px;
+}
+
+.capa {
+    position: absolute;
+    z-index: 8;
+    transition: transform 2s;
+}
+
+.capa label {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Declarando tamanho, sombra e transição das páginas. */
+.pagina {
+    position: absolute;
+    background-color: var(--cor3);
+    width: 340px;
+    height: 480px;
+    border-radius: 0 15px 15px 0;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition-duration: 2s;
+}
+
+
+#pag1 .pagina-esquerda {
+    background-image: url(/site/html/img/home/folhaDeRosto.png);
+    border-radius: 0 15px 15px 0;
+}
+
+.pagina-direita img {
+    width: 340px;
+    height: 480px;
+    border-radius: 15px 0 0 15px;
+}
+
+/* Declarando visibilidade e tamanho da página á esquerda. */
+.pagina-esquerda {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+/*Declarando visibilidade, tamanho e rotação da página á direita.*/
+.pagina-direita {
+    transform: rotateY(180deg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    z-index: 99;
+}
+
+/* Estilizando os icons para virar ás páginas. */
+.esquerda,
+.direita {
+    position: absolute;
+    bottom: 1em;
+    cursor: pointer;
+}
+
+/* Declarando tamanho do icon á esquerda. */
+.esquerda {
+    right: 1em;
+}
+
+/* Declarando tamanho do icon á direita. */
+.direita {
+    left: 1em;
+}
+
+
+h1 {
+    color: var(--cor1);
+    font-family: disquete;
+    font-size: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: var(--cor1);
+    font-family: disquete;
+    font-size: 16px;
+    text-align: center;
+}
+
+.autor {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: var(--cor2);
+}
+
 p {
     font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
 }
 
+.inicio::first-letter {
+    font-family: disquete;
+    color: var(--cor1);
+    font-size: 16px;
+}
 
-/* Definindo a div para ficar nas dimensões de um livro */
-.area-total {
-    height: 100vh;
+a {
+    text-decoration: none;
     display: flex;
     justify-content: center;
-    align-items: center;
-    border-radius: 5px 15px 15px 5px;
-    font-family: 'Courier New', Courier, monospace;
-    top: 0;
 }
 
-/* Declarando tamanho e bordas do livro */
-.book {
-    border-radius: 5px 15px 15px 5px;
-    position: relative;
-    width: 350px;
-    height: 500px;
-}
-
-/* Declrando posição da página */
-.pagina {
-    border-radius: 5px 15px 15px 5px;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    perspective: 1500px;
-}
-
-/* Declrando cor e tamanho da página */
-.frente,
-.verso {
-    background-color: var(--branco);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transform-origin: left;
-    transition: all 0.5s;
-}
-
-.conteudo-verso img {
-    position: relative;
-    width: 350px;
-    height: 500px;
-}
-
-/* Deixando a frente acima de todas as outras páginas */
-.frente {
-    z-index: 1;
-}
-
-/* Deixando o verso abaixo da frente */
-.verso {
-    z-index: 0;
-}
-
-/* Declarando tamanho e centralizando o conteudo */
-.conteudo-frente,
-.conteudo-verso {
-    font-size: 1px;
-    width: 350px;
-    height: 500px;
-    display: flex;
-}
-
-#bnt-direito,
-#bnt-esquerdo {
-    height: 100vh;
-    justify-content: center;
-}
-
-.virar .frente,
-.virar .verso {
-    transform: rotateY(-180deg);
-}
-
-#p1 {
-    z-index: 6;
-}
-
-#p2 {
-    z-index: 5;
-}
-
-#p3 {
-    z-index: 4;
-}
-
-#p4 {
-    z-index: 3;
-}
-
-#p5 {
-    z-index: 2;
-}
-
-#p6 {
-    z-index: 1;
-}
-
-#p7 {
-    z-index: 0;
-}
-
-/* Configuração dos botoes */
 button {
+    width: 100px;
+    height: 30px;
+    border-radius: 50px;
     border: none;
-    background-color: transparent;
-    cursor: pointer;
-    margin: 15px;
-    transition: all 0.4s;
+    font-family: disquete;
+    color: var(--branco);
+    text-align: center;
+    background-color: var(--cor1);
 }
 
-/* Modificando cor e tamanho das setas */
-button i {
-    font-size: 30px;
+button:hover {
+    background-color: var(--branco);
+    font-family: disquete;
+    font-size: 15px;
+    font-weight: 550;
+    color: var(--cor1);
+    border-radius: 40px;
+}
+
+button a:hover {
+    background-color: var(--branco);
     color: var(--cor1);
 }
 
-/* Desabilitando o focus */
-button:focus {
-    outline: none;
+.tampa-capa {
+    position: relative;
+    z-index: -1;
 }
 
-/* Efeito hover do botão */
-button:hover {
-    background-color: var(--branco);
-    border: 100px;
-    border-radius: 20px;
+
+#pag1 {
+    z-index: 6;
 }
 
-/* Alterando a cor do botao com hover */
-button i:hover {
-    color: var(--cor2);
+/* Separando as páginas. */
+#pag2 {
+    z-index: 5;
+}
+
+/* Separando as páginas. */
+#pag3 {
+    z-index: 4;
+}
+
+#pag4 {
+    z-index: 3;
+}
+
+/* Separando as páginas. */
+#pag5 {
+    z-index: 2;
+}
+
+/* Separando as páginas. */
+#pag6 {
+    z-index: 1;
+}
+
+#pag7 {
+    z-index: 0;
+}
+
+/* Virando a capa */
+#checkbox-capa:checked~.livro {
+    transform: translateX(200px);
+}
+
+
+#checkbox-pag1:checked~.livro .capa {
+    pointer-events: none;
+}
+
+/* Virando desvirando a capa. */
+#checkbox-capa:checked~.livro .capa {
+    transition: transform 1.5s, z-index 0.5s 0.5s;
+    transform: rotateY(-180deg);
+    z-index: 1;
+}
+
+/* Dando sombra a transição */
+#checkbox-capa:checked~.livro .pagina {
+    box-shadow: 0 0 3px rgb(99, 98, 98);
+}
+
+/* Virando a página 1. */
+#checkbox-pag1:checked~.livro #pag1 {
+    transform: rotateY(-180deg);
+    z-index: 2;
+}
+
+/* Virando a página 2. */
+#checkbox-pag2:checked~.livro #pag2 {
+    transform: rotateY(-180deg);
+    z-index: 3;
+}
+
+/* Virando a pagina 3. */
+#checkbox-pag3:checked~.livro #pag3 {
+    transform: rotateY(-180deg);
+    z-index: 4;
+}
+
+/* Virando a pagina 4. */
+#checkbox-pag4:checked~.livro #pag4 {
+    transform: rotateY(-180deg);
+    z-index: 5;
+}
+
+/* Virando a pagina 5. */
+#checkbox-pag5:checked~.livro #pag5 {
+    transform: rotateY(-180deg);
+    z-index: 6;
+}
+
+/* Virando a pagina 6. */
+#checkbox-pag6:checked~.livro #pag6 {
+    transform: rotateY(-180deg);
+    z-index: 7;
+}
+
+/* Virando a pagina 7. */
+#checkbox-pag8:checked~.livro #pag7 {
+    transform: rotateY(-180deg);
+    z-index: 8;
 }

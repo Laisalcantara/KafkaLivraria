@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/reader.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="stylesheet" href="css/flipbook.css">
+    <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -27,7 +28,7 @@
         <!-- Logo e caixa de pesquisa -->
         <img id="kafkaLogo" src="img/header/kafkaLogo.png">
         <div class="search_box">
-            <input type="search" placeholder="Pesquise aqui">
+            <input type="text" placeholder="Pesquise aqui">
             <i id="search" class="fa-solid fa-magnifying-glass"></i>
         </div>
 
@@ -50,7 +51,7 @@
                 <!-- <div class="div-submenu"> -->
                 <ul>
                     <li class="subMenu"><a href="#">Geek</a></li>
-                    <li class="subMenu"><a href="#">Ebook</a></li>
+                    <li class="subMenu"><a href="ebook.html">Ebook</a></li>
                     <li class="subMenu"><a href="#">Infantil</a></li>
                     <li class="subMenu"><a href="#">Ofertas</a></li>
                     <li class="subMenu"><a href="#">Estudos</a></li>
@@ -71,7 +72,7 @@
             <div class="icons-circulo">
                 <ul>
                     <li><a href="#"><i class="fa-sharp fa-solid fa-hand-spock"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-mobile-screen-button"></i></a></li>
+                    <li><a href="ebook.html"><i class="fa-solid fa-mobile-screen-button"></i></a></li>
                     <li><a href="#"><i class="fa-solid fa-cubes"></i></a></li>
                     <li><a href="#"><i class="fa-solid fa-tags"></i></a></li>
                     <li><a href="#"><i class="fa-solid fa-graduation-cap"></i></a></li>
@@ -82,227 +83,349 @@
 
         <section>
 
-
-            <div class="area-total">
-                <!-- Botao do flipbook -->
-                <button id="bnt-esquerda">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </button>
+            <div class="area-livro">
 
 
+                <input type="checkbox" id="checkbox-capa">
+                <input type="checkbox" id="checkbox-pag1">
+                <input type="checkbox" id="checkbox-pag2">
+                <input type="checkbox" id="checkbox-pag3">
+                <input type="checkbox" id="checkbox-pag4">
+                <input type="checkbox" id="checkbox-pag5">
+                <input type="checkbox" id="checkbox-pag6">
 
-
-                <!-- Conteudo do livro -->
-                <div id="book" class="book">
-                    <!-- Página 1 -->
-                    <div id="p1" class="pagina virar">
-
-                        <div class="frente">
-                            <div id="f1" class="conteudo-frente">
-                                <img id="capa" src="img/home/mais-vendidos.png"
-                                    alt="Um livro de capa bordô com o titulo de Mais vendidos e o subtitulo de sucessos do kafka.">
-                            </div>
-                        </div>
-
-                        <div class="verso">
-                            <div id="v1" class="conteudo-verso">
-                                <img id="capa" src="img/home/geek-onePiece.jpg" alt="Capa do Mangá One Piece volume 1.">
-                            </div>
-                        </div>
+                <div class="livro">
+                    <div class="capa">
+                        <label for="checkbox-capa"><i class="fas fa-chevron-right"></i></label>
                     </div>
-                    <!-- Página 2 -->
-                    <div id="p2" class="pagina">
-
-                        <div class="frente">
-                            <div id="f1" class="conteudo-frente">
-                                <h1>One Piece Vol. 1 Capa comum</h1>
-                                <p class="autor">Eiichiro Oda</p>
-                                <h2>R$29,70</h2>
-                                <p>A tripulação pirata mais famosa dos quadrinhos finalmente joga sua âncora de novo no
-                                    Brasil! Com roteiro e arte de Eiichiro Oda, o mangá de maior sucesso de todos os
-                                    tempos retorna ao país, agora sob a bandeira Planet Mangá, da Panini Comics! Para
-                                    ser o rei dos piratas, Luffy, o homem-borracha, precisa reunir uma tripulação e
-                                    encontrar o maior de todos os tesouros. No caminho, enfrentará a Marinha, monstros,
-                                    e muitos outros piratas que têm o mesmo objetivo. Então prepare-se pra encarar os
-                                    perigos dos mares. A maior aventura de todas vai recomeçar!</p>
-                            </div>
-                        </div>
-
-                        <div class="verso">
-                            <div id="v2" class="conteudo-verso">
-                                <img id="capa" src="img/home/ebook-casamento.jpg"
-                                    alt="Capa do livro Um Casamento Forçado onde um homem branco sem camisa com uma tatuagem tribal que vai do peito direito ao pulso direito ajoelhado com as mãos amarradas por cordas">
-                            </div>
-                        </div>
-
-                        <!-- Página 3 -->
-                        <div id="p3" class="pagina">
-
-                            <div class="frente">
-                                <div id="f3" class="conteudo-frente">
-                                    <h1>UM CASAMENTO FORÇADO</h1>
-                                    <p class="autor">Ivy Matarazzo</p>
-                                    <h2>R$2,29</h2>
-                                    <p>Constantini Erden é um cirurgião conceituado nos Estados Unidos, mulherengo, tem
-                                        a vida que tanto almejou e a aproveita intensamente. Quando seu pai fica à beira
-                                        da morte, ele tem que regressar à Turquia para assumir os negócios da família.
-                                        Mas, como tudo que é ruim só tende a piorar, ele descobre por meio de um
-                                        testamento que caiu numa armadilha: precisará se casar com uma desconhecida de
-                                        família tradicional, para que todos os seus bens não sejam doados.
-
-                                        Noor Volat é uma jovem que passou a vida reclusa, esperando o momento de seu
-                                        casamento. Com um pai autoritário e abusivo, a garota idealiza no próprio
-                                        casamento à felicidade. Mas o que a jovem não sabe é que o seu prometido não
-                                        está nem um pouco interessado em se casar.
-
-                                        Ele é apaixonado por outra;
-                                        Ela o esperou a vida inteira;
-                                        Eles serão obrigados a se casar.
-                                        Allah pode escrever certo por linhas tortas?</p>
-                                </div>
-                            </div>
-
-                            <div class="verso">
-                                <div id="v3" class="conteudo-verso">
-                                    <img id="capa" src="img/home/infantil-dinossauro.jpg"
-                                        alt="Uma area arborizada com um dinoussauro verde anda com uma expressão triste. Ao fundo outros 3 dinoussauros brincam e sorriem.">
-                                </div>
-                            </div>
-                        </div>
 
 
-                        <!-- Página 4 -->
-                        <div id="p4" class="pagina">
+                    <div class="pagina" id="pag1">
 
-                            <div class="frente">
-                                <div id="f4" class="conteudo-frente">
-                                    <h1>O Dinossauro Sem Talento: confiança, habilidade, educação.</h1>
-                                    <p class="autor">Hugo Fabrício de Medeiros</p>
-                                    <h2>R$9,99</h2>
-                                    <p>Elogios podem prejudicar a autoestima dos filhos.
-                                        A afirmação pode parecer estranha, mas é verdadeira. Muitos pais erram ao
-                                        elogiar seus filhos de forma exagerada quando são pequenos.
+                        <div class="pagina-esquerda">
 
-                                        Quando os filhos pensam que já estão fazendo algo incrível, eles param de se
-                                        esforçar. E é o esforço que constrói competência e, consequentemente, confiança.
-                                        Ou seja, errar, tentar de novo e melhorar cada vez mais.
 
-                                        Embarque nessa historinha incrível sobre um simpático dinossauro que passou por
-                                        tudo isso e aprendeu a desenvolver seu talento e sua autoestima. Esse livro faz
-                                        parte da série Contos Infantis, para ajudar pais e filhos a superar desafios
-                                        juntos.</p>
-                                </div>
-                            </div>
-
-                            <div class="verso">
-                                <div id="v4" class="conteudo-verso">
-                                    <img src="img/home/promoçao-herança.jpg"
-                                        alt="Um fundo verde oliva no centro há um quadro com moldura dourada onde um Dragão verde com detalhes amarelos posa de perfil.">
-                                </div>
-                            </div>
+                            <label class="esquerda" for="checkbox-pag1"><i class="fas fa-chevron-right"></i></label>
 
                         </div>
 
-                        <!-- Página 5 -->
-                        <div id="p5" class="pagina">
+                        <div class="pagina-direita" id="verso">
 
-                            <div class="frente">
-                                <div id="f5" class="conteudo-frente">
-                                    <h1>Herança (Ciclo A Herança Livro 4)</h1>
-                                    <p class="autor">Christopher Paolini</p>
-                                    <h2>R$79,92</h2>
-                                    <p>Não muito tempo atrás, Eragon – Matador de Espectros, Cavaleiro de Dragão –, nada
-                                        mais era do que um pobre menino de fazenda. Seu dragão, Saphira, não passava de
-                                        uma pedra azul na floresta. Agora, o destino de toda uma civilização repousa
-                                        sobre seus ombros.Longos meses de lutas e treinamentos trouxeram vitórias e
-                                        esperança, assim como perdas dolorosas. Mas a verdadeira batalha ainda está por
-                                        vir: eles precisam enfrentar Galbatorix. Quando o fizerem, terão de ser fortes o
-                                        suficiente para derrotá-lo. Se eles não puderem fazer isso, ninguém poderá. Não
-                                        haverá segunda chance. O Cavaleiro e seu dragão chegaram mais longe do que
-                                        qualquer um ousou imaginar. Mas será que conseguirão derrubar o rei do mal e
-                                        restabelecer a justiça na Alagaësia? E a que custo?Esta é a conclusão fascinante
-                                        para o Cliclo A Herança, best-seller mundial de Christopher Paolini.</p>
-                                </div>
-                            </div>
-
-                            <div class="verso">
-                                <div id="v5" class="conteudo-verso">
-                                    <img src="img/home/estudos-ingles.jpg"
-                                        alt="Um fundo branco com o titulo Contos em Inglês no centro. Nas bordas vemos icones como a bandeira da Inglaterra, um guarda-chuva azul aberto, um guarda real, uma coroa e uma hora gigante, dispostos aleatoriamente">
-                                </div>
-                            </div>
+                            <img id="capa" src="img/home/geek-onePiece.jpg" alt="Capa do Mangá One Piece volume 1.">
+                            <label class="direita" for="checkbox-pag1"><i class="fas fa-chevron-left"></i></label>
 
                         </div>
-
-                        <!-- Página 6 -->
-                        <div id="p6" class="pagina">
-
-                            <div class="frente">
-                                <div id="f6" class="conteudo-frente">
-                                    <h1>Aprenda Inglês com Contos Incríveis para Iniciantes e Intermediários</h1>
-                                    <p class="autor">Jack Cactus</p>
-                                    <h2>R$73,23</h2>
-                                    <p>Melhore suas habilidades de leitura, pronúncia e compreensão auditiva. Aprimore
-                                        seu vocabulário de maneira fácil e agradável, com 7 contos divertidos e
-                                        envolventes, para iniciantes e intermediários.
-
-                                        ÁUDIO EM INGLÊS GRÁTIS!
-
-                                        Ler e ouvir histórias em Inglês é um método eficiente e agradável de se aprender
-                                        o idioma. É uma forma de se imergir e se envolver em todos os sentidos do
-                                        aprendizado.
-
-                                        Você terá em suas mãos 7 contos escritos em Inglês e Português, além do áudio em
-                                        Inglês.</p>
-                                </div>
-                            </div>
-
-                            <div class="verso">
-                                <div id="v6" class="conteudo-verso">
-                                    <img src="img/home/estrangeiro-valise.jpg"
-                                        alt="Uma escadaria com casas e arvores ao redor onde um homem de terno e gravata segura uma pasta na mão e ao seu lado há uma mulher com cabelos escuros até o ombro vestida com uma blusa social vermelha e uma calça branca olhando para frente.">
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Página 7 -->
-                        <div id="p7" class="pagina">
-
-                            <div class="frente">
-                                <div id="f7" class="conteudo-frente">
-                                    <h1>A Valise do Professor (Mangá Volume Único)</h1>
-                                    <p class="autor">JIRO TANIGUCHI</p>
-                                    <h2>R$33,96</h2>
-                                    <p>A metrópole de Tóquio oferece um cotidiano estável e sem grandes sobressaltos
-                                        para Tsukiko Omachi, uma mulher de 37 anos que leva a vida de solteira entre o
-                                        trabalho no escritório e uma rotina solitária. Certo dia, em uma de suas idas a
-                                        um bar que frequenta, reencontra um antigo professor dos tempos de ensino médio,
-                                        com quem começa a dividir os drinques e petiscos. Aos poucos, a casualidade
-                                        evolui para um relacionamento repleto de pequenas descobertas e, à medida que
-                                        Tsukiko conhece mais sobre seu amigo trinta anos mais velho, a diferença de
-                                        idade começa a se diluir, apesar dos olhares alheios de reprovação.
-
-                                        O livro homônimo que deu origem a este mangá, lançado em 2001 por Hiromi
-                                        Kawakami, uma das escritoras japonesas mais lidas da atualidade, cativa por sua
-                                        prosa elegante e enxuta, e ganhou o Prêmio Tanizaki de literatura de ficção. A
-                                        versão em quadrinhos de Jiro Taniguchi saiu serializada originalmente entre 2008
-                                        e 2009, e depois foi encadernada em duas edições pela editora Futabasha, que
-                                        chegam agora ao Brasil em uma caprichada edição definitiva.</p>
-                                </div>
-                            </div>
-
-                        </div>
-
 
                     </div>
+
+
+                    <div class="pagina" id="pag2">
+
+                        <div class="pagina-esquerda">
+
+                            <h1>One Piece Vol. 1 Capa comum</h1>
+                            <p class="autor">Eiichiro Oda</p>
+                            <h2>R$29,70</h2>
+                            <p class="inicio">A tripulação pirata mais famosa dos quadrinhos finalmente joga sua âncora
+                                de novo no
+                                Brasil! Com roteiro e arte de Eiichiro Oda, o mangá de maior sucesso de todos os
+                                tempos retorna ao país, agora sob a bandeira Planet Mangá, da Panini Comics! Para
+                                ser o rei dos piratas, Luffy, o homem-borracha, precisa reunir uma tripulação e
+                                encontrar o maior de todos os tesouros. No caminho, enfrentará a Marinha, monstros,
+                                e muitos outros piratas que têm o mesmo objetivo. Então prepare-se pra encarar os
+                                perigos dos mares. A maior aventura de todas vai recomeçar!</p>
+                            <a href="#"><button class="bnt-comprar">Comprar</button></a>
+                            <label class="esquerda" for="checkbox-pag2"><i class="fas fa-chevron-right"></i></label>
+
+                        </div>
+
+                        <div class="pagina-direita" id="verso">
+
+                            <img id="capa" src="img/home/ebook-casamento.jpg"
+                                alt="Capa do livro Um Casamento Forçado onde um homem branco sem camisa com uma tatuagem tribal que vai do peito direito ao pulso direito ajoelhado com as mãos amarradas por cordas">
+                            <label class="direita" for="checkbox-pag2"><i class="fas fa-chevron-left"></i></label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pagina" id="pag3">
+
+                        <div class="pagina-esquerda">
+
+                            <h1>UM CASAMENTO FORÇADO</h1>
+                            <p class="autor">Ivy Matarazzo</p>
+                            <h2>R$2,29</h2>
+                            <p class="inicio">Constantini Erden é um cirurgião conceituado nos Estados Unidos,
+                                mulherengo. Quando seu pai fica à beira
+                                da morte, ele tem que regressar à Turquia para assumir os negócios da família.
+                                Mas, como tudo que é ruim só tende a piorar, precisará se casar com uma desconhecida,
+                                para que todos os seus bens não sejam doados.
+
+                                Noor Volat é uma jovem que passou a vida reclusa, esperando o momento de seu
+                                casamento. Com um pai autoritário e abusivo, a garota idealiza no próprio
+                                casamento à felicidade. Mas o que a jovem não sabe é que o seu prometido não
+                                está nem um pouco interessado em se casar.</p>
+                            <a href="#"><button class="bnt-comprar">Comprar</button></a>
+                            <label class="esquerda" for="checkbox-pag3"><i class="fas fa-chevron-right"></i></label>
+
+                        </div>
+
+                        <div class="pagina-direita" id="verso">
+
+                            <img id="capa" src="img/home/infantil-dinossauro.jpg"
+                                alt="Uma area arborizada com um dinoussauro verde anda com uma expressão triste. Ao fundo outros 3 dinoussauros brincam e sorriem.">
+                            <label class="direita" for="checkbox-pag3"><i class="fas fa-chevron-left"></i></label>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="pagina" id="pag4">
+
+                        <div class="pagina-esquerda">
+
+                            <h1>O Dinossauro Sem Talento: confiança, habilidade, educação.</h1>
+                            <p class="autor">Hugo Fabrício de Medeiros</p>
+                            <h2>R$9,99</h2>
+                            <p class="inicio">Elogios podem prejudicar a autoestima dos filhos.
+                                A afirmação pode parecer estranha, mas é verdadeira. Muitos pais erram ao
+                                elogiar seus filhos de forma exagerada quando são pequenos.
+
+                                Quando os filhos pensam que já estão fazendo algo incrível, eles param de se
+                                esforçar. E é o esforço que constrói competência e confiança.
+                                Ou seja, errar, tentar de novo e melhorar cada vez mais.
+
+                                Embarque nessa historinha incrível sobre um simpático dinossauro que passou por
+                                tudo isso e aprendeu a desenvolver seu talento e sua autoestima.</p>
+                            <a href="#"><button class="bnt-comprar">Comprar</button></a>
+                            <label class="esquerda" for="checkbox-pag4"><i class="fas fa-chevron-right"></i></label>
+
+                        </div>
+
+                        <div class="pagina-direita" id="verso">
+
+                            <img src="img/home/promoçao-herança.jpg"
+                                alt="Um fundo verde oliva no centro há um quadro com moldura dourada onde um Dragão verde com detalhes amarelos posa de perfil.">
+                            <label class="direita" for="checkbox-pag4"><i class="fas fa-chevron-left"></i></label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pagina" id="pag5">
+
+                        <div class="pagina-esquerda">
+
+                            <h1>Herança (Ciclo A Herança Livro 4)</h1>
+                            <p class="autor">Christopher Paolini</p>
+                            <h2>R$79,92</h2>
+                            <p class="inicio">Não muito tempo atrás, Eragon – Matador de Espectros, Cavaleiro de Dragão
+                                –, nada
+                                mais era do que um pobre menino de fazenda. Seu dragão, Saphira, não passava de
+                                uma pedra azul na floresta. Agora, o destino de toda uma civilização repousa
+                                sobre seus ombros.Longos meses de lutas e treinamentos trouxeram vitórias e
+                                esperança, assim como perdas dolorosas. Mas a verdadeira batalha ainda está por
+                                vir: eles precisam enfrentar Galbatorix. Não
+                                haverá segunda chance. Mas será que conseguirão derrubar o rei do mal e
+                                restabelecer a justiça na Alagaësia? E a que custo?</p>
+                            <a href="#"><button class="bnt-comprar">Comprar</button></a>
+                            <label class="esquerda" for="checkbox-pag5"><i class="fas fa-chevron-right"></i></label>
+
+                        </div>
+
+                        <div class="pagina-direita" id="verso">
+
+                            <img src="img/home/estudos-ingles.jpg"
+                                alt="Um fundo branco com o titulo Contos em Inglês no centro. Nas bordas vemos icones como a bandeira da Inglaterra, um guarda-chuva azul aberto, um guarda real, uma coroa e uma hora gigante, dispostos aleatoriamente">
+                            <label class="direita" for="checkbox-pag5"><i class="fas fa-chevron-left"></i></label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pagina" id="pag6">
+
+                        <div class="pagina-esquerda">
+
+                            <h1>Aprenda Inglês com Contos Incríveis para Iniciantes e Intermediários</h1>
+                            <p class="autor">Jack Cactus</p>
+                            <h2>R$73,23</h2>
+                            <p class="inicio">Melhore suas habilidades de leitura, pronúncia e compreensão auditiva.
+                                Aprimore
+                                seu vocabulário de maneira fácil e agradável, com 7 contos divertidos e
+                                envolventes, para iniciantes e intermediários.
+
+                                ÁUDIO EM INGLÊS GRÁTIS!
+
+                                Ler e ouvir histórias em Inglês é um método eficiente e agradável de se aprender
+                                o idioma. É uma forma de se imergir e se envolver em todos os sentidos do
+                                aprendizado.
+
+                                Você terá em suas mãos 7 contos escritos em Inglês e Português, além do áudio em
+                                Inglês.</p>
+                            <a href="#"><button class="bnt-comprar">Comprar</button></a>
+                            <label class="esquerda" for="checkbox-pag6"><i class="fas fa-chevron-right"></i></label>
+
+                        </div>
+
+                        <div class="pagina-direita" id="verso">
+
+                            <img src="img/home/estrangeiro-valise.jpg"
+                                alt="Uma escadaria com casas e arvores ao redor onde um homem de terno e gravata segura uma pasta na mão e ao seu lado há uma mulher com cabelos escuros até o ombro vestida com uma blusa social vermelha e uma calça branca olhando para frente.">
+                            <label class="direita" for="checkbox-pag6"><i class="fas fa-chevron-left"></i></label>
+
+                        </div>
+
+                    </div>
+
+                    <div class="pagina" id="pag7">
+
+                        <div class="pagina-esquerda">
+
+                            <h1>A Valise do Professor (Mangá Volume Único)</h1>
+                            <p class="autor">JIRO TANIGUCHI</p>
+                            <h2>R$33,96</h2>
+                            <p class="inicio">Tsukiko Omachi, uma mulher de 37 anos que leva a vida de solteira entre o
+                                trabalho no escritório e uma rotina solitária. Certo dia, em uma de suas idas a
+                                um bar que frequenta, reencontra um antigo professor dos tempos de ensino médio,
+                                com quem começa a dividir os drinques e petiscos. Aos poucos, a casualidade
+                                evolui para um relacionamento repleto de pequenas descobertas e, à medida que
+                                Tsukiko conhece mais sobre seu amigo trinta anos mais velho, a diferença de
+                                idade começa a se diluir.</p>
+                            <a href="#"><button class="bnt-comprar">Comprar</button></a>
+                        </div>
+
+                    </div>
+
+                    <div class="tampa-capa">
+
+                    </div>
+
                 </div>
-                <!-- Botão direita -->
-                <button id="bnt-direita">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
+
+
 
             </div>
+
+        </section>
+
+        <section>
+
+            <div class="area-card">
+                <h2>Romance</h2>
+
+                <div class="slider">
+                    <div class="card">
+
+                        <div class="fav">
+                        </div>
+                        <img class="imagem" src="/site/html/img/ebook/a-hipotese-do-amor.jpg" alt="">
+                        <h3>A Hipótese do Amor</h3>
+
+                        <p class="autor">Ali Hazzewood</p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>Olive Smith, aluna do doutorado em Biologia da Universidade Stanford, acredita na ciência
+                                – não
+                                em
+                                algo incontrolável como o amor.</p>
+                        </div>
+                        <div class="preco">
+                            <h3>R$29,61</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+                    <div class="card">
+
+                        <div class="fav">
+                        </div>
+                        <img class="imagem" src="/site/html/img/ebook/ebook-casamento.jpg" alt="">
+                        <h3>UM CASAMENTO FORÇADO</h3>
+                        <p class="autor">Ivi Matarazzo</p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>Constantini Erden é um cirurgião conceituado nos Estados Unidos,
+                                mulherengo. Quando seu pai fica à beira
+                                da morte, ele tem que regressar à Turquia para assumir os negócios da família.</p>
+                        </div>
+                        <div class="preco">
+                            <h3>R$2,29</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+                    <div class="card">
+
+                        <div class="fav">
+                        </div>
+                        <img class="imagem" src="/site/html/img/ebook/girlslikegirls.jpg" alt="">
+                        <h3>Girls Like Girls</h3>
+
+                        <p class="autor">HAYLEY KIYOKO</p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>Coley sente que não é a mesma desde a morte da mãe. Forçada a morar no interior do Oregon
+                                com o
+                                pai que abandonou a família, a garota se vê sozinha em um lugar desconhecido e
+                                conservador.</p>
+                        </div>
+                        <div class="preco">
+                            <h3>R$39,40</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+                    <div class="card">
+
+                        <div class="fav">
+                        </div>
+                        <img class="imagem" src="/site/html/img/ebook/vermelho-branco-e-sangue-azul.jpg" alt="">
+                        <h3>Vermelho, branco e sangue azul</h3>
+
+                        <p class="autor">Casey McQuiston </p>
+                        <div class="estrelas"><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="sinopse">
+                            <p>O que pode acontecer quando o filho da presidenta dos Estados Unidos se apaixona pelo
+                                príncipe da
+                                Inglaterra?</p>
+                        </div>
+                        <div class="preco">
+                            <h3>R$34,90</h3>
+                        </div>
+                        <a href="#"><button>Comprar</button></a>
+                    </div>
+
+
+                </div>
+            </div>
+
         </section>
 
     </main>
