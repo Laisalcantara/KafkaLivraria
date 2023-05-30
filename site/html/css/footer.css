@@ -1,0 +1,83 @@
+/* Definindo backgroun e margin do footer */
+footer {
+    background-color: var(--cor1);
+    margin-top: 5%;
+}
+
+/* Tamanho do Footer */
+.area-footer {
+    width: 100%;
+    padding: 30px 30px 20px;
+}
+
+/* Alinhamento dos Icons */
+.i-r {
+    display: flex;
+    justify-content: center;
+}
+
+/* Tamanho dos Icons */
+.i-r img {
+    width: 30px;
+    margin: 5px;
+}
+
+/* Declarando as decorações do link como none */
+.i-r a {
+    display: inline-flex;
+    text-decoration: none;
+}
+
+/* Circulo do Icon */
+.i-r a {
+    display: inline-flex;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    background-color: var(--cor2);
+    margin: 0 6px;
+    border-radius: 50px;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.4s;
+    font-size: 70px;
+}
+
+/* Cor do hover */
+.i-r a:hover {
+    background-color: var(--branco);
+}
+
+/* Duração da animação */
+.i-r a img {
+    transition: 00.4s all;
+}
+
+/* Modelo de animação */
+.i-r a:hover>img {
+    transform: rotate(360deg);
+}
+
+/* Definição do Background e tamanho da div */
+.pFooter {
+    background-color: var(--cor2);
+    padding: 10px 10px 10px;
+}
+
+/* Alinhando ao centro e declarando cor da fonte. */
+.pFooter p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--branco);
+    font-size: 20px;
+}
+
+/* Desabilitando a decoração do link e pondo em negrito. */
+.pFooter p a {
+    text-decoration: none;
+    color: var(--branco);
+    font-weight: 550;
+    margin-left: 6px;
+    cursor: pointer;
+}

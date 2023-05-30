@@ -16,16 +16,18 @@
     src: url(./fonte/FontsFree-Net-Disket-Mono-Regular.ttf);
 }
 
-
+/* Declarando margin */
 .area-card {
     margin-top: -80px;
 }
 
+/* Estilizando h1 */
 .area-card h1 {
     font-family: disquete;
     color: var(--cor1);
 }
 
+/* Estilizando h2 */
 .area-card h2 {
     font-family: disquete;
     color: var(--cor1);
@@ -37,6 +39,7 @@
     text-align: center;
 }
 
+/* Estilizando linha */
 .area-card h2::after {
     content: "";
     position: absolute;
@@ -49,25 +52,28 @@
     margin: auto;
 }
 
+/* Estilizando h3 */
 .area-card h3 {
     color: var(--cor1);
     font-family: disquete;
+    text-align: center;
     margin-bottom: 10px;
     margin-top: 10px;
 }
 
+/* Displey da div */
 .slider {
     display: flex;
 }
 
+/* Tamanho e estilização do card. */
 .slider .card {
     background-color: var(--branco);
     border-radius: 5px;
     margin: 1rem;
     padding: 1rem;
-    box-shadow: 0px 4px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 4px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 4px -5px rgba(0, 0, 0, 0.75);
+    margin-top: 25px;
+    box-shadow: 0 0 10px rgb(41, 41, 41);
     width: 100%;
     height: 600px;
     display: flex;
@@ -75,33 +81,44 @@
     align-items: center;
 }
 
+/* Hover do card */
+.slider .card:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+/* Tamanho da capa dos livros */
 .slider .card .imagem {
     width: 200px;
     height: 300px;
     border-radius: 5px;
 }
 
+/* Icon de Favorito */
 .slider .card .fav {
     background-image: url(/site/html/img/ebook/heart-regular-24.png);
     position: absolute;
-    height: 30px;
-    width: 30px;
-    background-size: 30px;
+    height: 20px;
+    width: 20px;
+    background-size: 20px;
     display: flex;
     place-self: flex-end;
     transition: 0.3 all ease;
     cursor: pointer;
 }
 
+/* Hover do icon de favorito */
 .slider .card .fav:hover {
     background-image: url(/site/html/img/ebook/heart-solid-24.png);
 }
 
+/* Estilização das estrelas */
 .estrelas i {
     color: #bc8034;
     margin-top: 15px;
 }
 
+/* Estilização da sinopse */
 .card .sinopse {
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
@@ -109,6 +126,7 @@
     height: 280px;
 }
 
+/* Estilização do p autor */
 .card .autor {
     font-family: 'Courier New', Courier, monospace;
     color: var(--cor2);
@@ -116,6 +134,7 @@
     /* margin-bottom: -10px; */
 }
 
+/* Botão do card */
 .card button {
     width: 100px;
     height: 30px;
@@ -127,6 +146,7 @@
     background-color: var(--cor1);
 }
 
+/* Hover botão */
 .card button:hover {
     background-color: var(--cor2);
     font-family: disquete;

@@ -16,16 +16,19 @@
     src: url(./fonte/FontsFree-Net-Disket-Mono-Regular.ttf);
 }
 
+/* Backgroun da pagina */
 body {
     background-color: var(--cor3);
 }
 
+/* Area do card */
 .area-card {
     padding: 2rem 0;
     padding: 2rem 0;
     margin-left: 50px;
 }
 
+/* Estilizando h1 */
 .area-card h1 {
     font-family: disquete;
     font-size: 35px;
@@ -33,6 +36,7 @@ body {
     margin-left: 40px;
 }
 
+/* Estilizando h2 */
 .area-card h2 {
     font-family: disquete;
     color: var(--cor1);
@@ -45,6 +49,7 @@ body {
     text-align: center;
 }
 
+/* Estilizando linha */
 .area-card h2::after {
     content: "";
     position: absolute;
@@ -57,37 +62,48 @@ body {
     margin: auto;
 }
 
-.area-card  h3 {
+/* Estilizando h3 */
+.area-card h3 {
     color: var(--cor1);
     font-family: disquete;
+    text-align: center;
 }
 
+/* Estilizando o h3 só do valor */
 .valor h3 {
     color: var(--cor1);
     font-family: disquete;
     margin-bottom: 10px;
 }
 
+/* Displey da div */
 .slider {
     display: flex;
 }
 
+/* Tamanho e estilização do card. */
 .slider .card {
     background-color: var(--branco);
     border-radius: 5px;
     margin: 10px;
     margin-right: 22px;
+    margin-top: 25px;
     padding: 30px;
-    box-shadow: 0px 4px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 4px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 4px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 10px rgb(41, 41, 41);
     width: 300px;
-   left: 100%;
+    height: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Hover do card */
+.slider .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+/* Tamanho da capa dos livros */
 .slider .card .imagem {
     width: 200px;
     height: 300px;
@@ -95,26 +111,32 @@ body {
     margin-bottom: 10px;
 }
 
+/* Icon de Favorito */
 .slider .card .fav {
+    position: absolute;
     background-image: url(/site/html/img/ebook/heart-regular-24.png);
-    height: 30px;
-    width: 30px;
-    background-size: 30px;
+    height: 20px;
+    width: 20px;
+    background-size: 20px;
+    margin-right: -10px;
     display: flex;
     place-self: flex-end;
     transition: 0.3 all ease;
     cursor: pointer;
 }
 
+/* Hover do icon de favorito */
 .slider .card .fav:hover {
     background-image: url(/site/html/img/ebook/heart-solid-24.png);
 }
 
+/* Estilização das estrelas */
 .estrelas i {
     color: #bc8034;
     margin-top: 15px;
 }
 
+/* Estilização da sinopse */
 .card .sinopse {
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
@@ -122,12 +144,14 @@ body {
     height: 280px;
 }
 
+/* Estilização do p autor */
 .card .autor {
     font-family: 'Courier New', Courier, monospace;
     color: var(--cor2);
     margin: 3px;
 }
 
+/* Botão do card */
 .card button {
     width: 100px;
     height: 30px;
@@ -139,6 +163,7 @@ body {
     background-color: var(--cor1);
 }
 
+/* Hover botão */
 .card button:hover {
     background-color: var(--cor2);
     font-family: disquete;

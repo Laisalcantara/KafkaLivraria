@@ -48,6 +48,11 @@ a i {
 
 }
 
+.icons-circulo img {
+    width: 50px;
+   height: 50px;
+}
+
 /* Configuração total dos icons */
 .icons-circulo a {
     display: inline-flex;
@@ -60,7 +65,7 @@ a i {
     justify-content: space-around;
     align-items: center;
     transition: 0.4s;
-    font-size: 40px;
+    font-size: 70px;
 }
 
 /* Mudando background com hover */
@@ -69,11 +74,11 @@ a i {
 }
 
 /* Cronometrando a transição */
-.icons-circulo a i {
+.icons-circulo a img {
     transition: 0.4s all;
 }
 
 /* Rodando os icons */
-.icons-circulo a:hover>i {
+.icons-circulo a:hover>img {
     transform: rotate(360deg);
 }
