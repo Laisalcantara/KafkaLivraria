@@ -1,0 +1,288 @@
+/* >> HOME << */
+Variaveis:root {
+    --cor1: #5e0b15;
+    --cor2: #90323d;
+    --cor3: #d9cab3;
+    --cor4: #bc8034;
+    --cor5: #000000;
+    --branco: #ffffff;
+}
+
+/* Importando fonte */
+@font-face {
+    font-family: disquete;
+    src: url(./fonte/FontsFree-Net-Disket-Mono-Regular.ttf);
+}
+
+/* Configuração geral da página */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Cor do body */
+body {
+    background-color: var(--cor3);
+}
+
+/* Cor dos icons */
+a i {
+    color: var(--cor5);
+}
+
+/* Desativando a estilização padrão do ul e pondo os objetos na mesma linha */
+.icons-circulo ul {
+    list-style: none;
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+/* Posição dos icons */
+.icons-circulo {
+    position: absolute;
+    top: 23%;
+    left: 40%;
+    transform: translate(-20%, -50%);
+
+}
+
+/* Configuração total dos icons */
+.icons-circulo a {
+    display: inline-flex;
+    text-decoration: none;
+    width: 70px;
+    height: 70px;
+    background-color: var(--cor4);
+    margin: 0 6px;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    font-size: 40px;
+}
+
+/* Mudando background com hover */
+.icons-circulo a:hover {
+    background-color: var(--cor2);
+}
+
+/* Cronometrando a transição */
+.icons-circulo a i {
+    transition: 0.4s all;
+}
+
+/* Rodando os icons */
+.icons-circulo a:hover>i {
+    transform: rotate(360deg);
+}
+
+
+/* >> HEADER << */
+
+/* Variaveis */
+:root {
+    --cor1: #5e0b15;
+    --cor2: #90323d;
+    --cor3: #d9cab3;
+    --cor4: #bc8034;
+    --cor5: #000000;
+    --branco: #ffffff;
+}
+
+/* Importando fonte */
+@font-face {
+    font-family: disquete;
+    src: url(./fonte/FontsFree-Net-Disket-Mono-Regular.ttf);
+}
+
+/* Configuração geral da página */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Alterando posição e cor do header */
+header {
+    display: flex;
+    width: 100%;
+    background-color: var(--cor1);
+    position: relative;
+    justify-content: space-between;
+}
+
+/* Alterando tamanho e margens da logo */
+#kafkaLogo {
+    width: 15%;
+    margin-bottom: 0.3%;
+}
+
+/* Alterando margem e estilização do ul */
+header ul {
+    display: flex;
+    list-style: none;
+    margin: 10px 5px;
+}
+
+/* Alterando margin e padding do li */
+header ul li {
+    margin: 15px 3px 5px 3px;
+    padding-right: 10px;
+}
+
+/* Alterando padding dos icones presente no li */
+header ul li img {
+    padding-right: 10px;
+}
+
+/* Duração da animação do hover */
+.iconMenu {
+    transition: all 0.2s;
+}
+
+/* Estilização da linha do hover */
+.iconMenu:hover {
+    text-decoration: underline;
+    border-bottom: 3px solid var(--branco);
+}
+
+/* Opacidade da linha */
+.iconMenu:hover::after {
+    opacity: 1;
+
+}
+
+/* Transição do hover */
+.iconMenu::after {
+    content: '';
+    opacity: 0;
+    transition: all 0.2s;
+    height: 3px;
+    width: 10px;
+    background-color: var(--branco);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Definindo tamanho da barra de pesquisa */
+header .search_box {
+    display: flex;
+    margin: auto 0;
+    height: 40px;
+    line-height: 35px;
+}
+
+/* Definindo propriedades da caixa do input */
+header .search_box input {
+    border: none;
+    color: var(--branco);
+    opacity: 0.9;
+    border-radius: 10px;
+    background-color: var(--cor2);
+    height: 100%;
+    padding: 0 10px;
+    font-size: 20px;
+    width: 350px;
+}
+
+
+/* Estilizando placeholder */
+header .search_box input::placeholder {
+    color: var(--branco);
+    opacity: 0.7;
+    font-family: disquete;
+}
+
+/* Estilizando icon da barra de pesquisa */
+header .search_box i {
+    color: var(--branco);
+    font-size: 20px;
+    height: 100%;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Hover da caixa de pesquisa */
+header .search_box i:hover {
+    background-color: var(--cor2);
+    border-radius: 50px;
+}
+
+/* Centralizando e estilizando o nav */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor2);
+    font-family: disquete;
+}
+
+/* Retirando os  icones do ul */
+.navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilizando cor do background dos uls */
+.navigation ul {
+    background-color: var(--cor2);
+}
+
+/* Deixando o li fixado */
+.navigation ul li {
+    display: inline;
+    position: relative;
+}
+
+/* Retirnado as decorações do link e cronometrando a duração da transição */
+.navigation ul li a {
+    color: var(--branco);
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+/* Personalizando o hover */
+.navigation ul li a:hover {
+    background-color: var(--branco);
+    border-radius: 40px;
+}
+
+/* Personalizando as cores do hover */
+.navigation ul li a:hover {
+    background-color: var(--branco);
+    color: var(--cor1);
+}
+
+/* Escondendo o submenu */
+.navigation ul ul {
+    display: none;
+    left: 0;
+    position: absolute;
+
+}
+
+/* Configurando o submenu para aparecer com o hover */
+.navigation ul li:hover ul {
+    display: block;
+    position: absolute;
+}
+
+/* Estilizando o submenu */
+.navigation ul ul {
+    width: 150px;
+    border-radius: 5px 5px 20px 20px;
+}
+
+/* Ocupando todo o bloco do submenu com um link */
+.navigation ul ul li a {
+    display: block;
+}
+
+/* >> ESTILIZAÇÕES EXTRAS << */
+
+
